@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050407">
+  <meta name="description" content="A little space, a different perspective. The personal world of Parvez Hasan Nahid.">
+  <title>Nahid's World — Parvez Hasan Nahid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer>
+(() => {
+  const loader = document.getElementById("loader");
+  const fill = document.getElementById("progressFill");
+  const status = document.getElementById("loaderStatus");
+  const embers = document.getElementById("embers");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // A small, fixed ember field keeps the effect light on mobile devices.
+  if (embers && !reduceMotion) {
+    const count = window.innerWidth < 600 ? 17 : 29;
+    for (let i = 0; i < count; i += 1) {
+      const ember = document.createElement("span");
+      ember.className = "ember";
+      ember.style.left = `${Math.random() * 100}%`;
+      ember.style.setProperty("--duration", `${7 + Math.random() * 8}s`);
+      ember.style.setProperty("--delay", `${-Math.random() * 14}s`);
+      ember.style.setProperty("--drift", `${Math.round((Math.random() - 0.5) * 150)}px`);
+      ember.style.width = ember.style.height = `${1 + Math.random() * 2}px`;
+      embers.appendChild(ember);
+    }
+  }
+
+  if (!loader || !fill) return;
+  if (reduceMotion) {
+    fill.style.width = "100%";
+    status.textContent = "EXPERIENCE READY";
+    window.addEventListener("load", () => window.setTimeout(() => loader.classList.add("is-hidden"), 100));
+    return;
+  }
+
+  let progress = 0;
+  const tick = window.setInterval(() => {
+    progress = Math.min(100, progress + (progress < 70 ? 5 : 2));
+    fill.style.width = `${progress}%`;
+    if (progress >= 100) {
+      window.clearInterval(tick);
+      status.textContent = "EXPERIENCE READY";
+      window.setTimeout(() => loader.classList.add("is-hidden"), 220);
+    }
+  }, 45);
+  window.addEventListener("load", () => {
+    // If assets finish early, complete the progress smoothly rather than waiting on a long timer.
+    progress = Math.max(progress, 86);
+  }, { once: true });
+})();
+  </script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading Nahid's World">
+    <div class="loader-inner">
+      <div class="loader-logo">N<span>.</span></div>
+      <p class="loader-welcome">WELCOME TO NAHID'S WORLD</p>
+      <p class="loader-subtitle">A little space, a different perspective.</p>
+      <div class="progress-track" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100">
+        <span class="progress-fill" id="progressFill"></span>
+      </div>
+      <p class="loader-status" id="loaderStatus">INITIALIZING EXPERIENCE...</p>
+    </div>
+  </div>
+
+  <!-- SVG turbulence gently distorts the layered flame gradients for a flowing fire effect. -->
+  <svg class="filter-defs" aria-hidden="true" focusable="false">
+    <filter id="flame-distortion" x="-30%" y="-20%" width="160%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.035" numOctaves="2" seed="8" result="noise">
+        <animate attributeName="baseFrequency" dur="7s" values="0.012 0.035;0.018 0.055;0.012 0.035" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <main class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="fire-scene" aria-hidden="true">
+      <div class="fire-glow"></div>
+      <div class="flame flame-back"></div>
+      <div class="flame flame-mid"></div>
+      <div class="flame flame-front"></div>
+      <div class="embers" id="embers"></div>
+    </div>
+
+    <section class="profile-card" aria-labelledby="profile-name">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> PERSONAL SPACE <span class="eyebrow-line"></span></div>
+      <div class="portrait-wrap">
+        <div class="portrait-aura"></div>
+        <img class="portrait" src="profile.jpg" alt="Portrait of Parvez Hasan Nahid" width="160" height="160">
+      </div>
+      <h1 id="profile-name">Parvez Hasan Nahid</h1>
+      <p class="tagline">A little corner of my world.</p>
+      <div class="title-rule"><span></span><i></i><span></span></div>
+
+      <nav class="social-links" aria-label="Social media links">
+        <a class="social-link" href="https://www.facebook.com/share/19rhKZbsyh/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.53 0-4.26 1.54-4.26 4.37V9.6H7.12v3.2h2.86V21h3.52Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/n.aurex/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.75" cy="6.45" r="1.15" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@_aure.x" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.1 8.2a7.1 7.1 0 0 1-4.3-1.45v7.1a5.75 5.75 0 1 1-5-5.7v3.55a2.25 2.25 0 1 0 1.5 2.13V2.5h3.5c.15 2.3 1.7 4.2 4.3 4.55v1.15Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/8801781724528" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 3.9A11.35 11.35 0 0 0 2.25 17.58L.7 23.25l5.8-1.52A11.35 11.35 0 0 0 20.1 3.9ZM12 20.7a9.4 9.4 0 0 1-4.8-1.32l-.35-.2-3.44.9.92-3.35-.22-.35A9.4 9.4 0 1 1 12 20.7Zm5.16-7.05c-.28-.14-1.65-.82-1.9-.91-.25-.1-.44-.14-.62.14-.19.28-.72.91-.88 1.1-.16.18-.32.2-.6.06-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.32.42-.48.14-.16.18-.28.28-.47.09-.18.04-.35-.03-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47h-.53c-.19 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s.99 2.68 1.13 2.86c.14.19 1.95 2.98 4.72 4.18.66.28 1.17.45 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.65-.68 1.88-1.33.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://discord.gg/9u6hfuHe2p" target="_blank" rel="noopener noreferrer" aria-label="Discord server" title="Discord">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.3A18.2 18.2 0 0 0 15.2 4l-.55 1.12a16.7 16.7 0 0 0-5.3 0L8.8 4a18.1 18.1 0 0 0-4.5 1.3C1.45 9.5.68 13.6 1.07 17.65a18.2 18.2 0 0 0 5.5 2.8l1.18-1.92c-.65-.24-1.27-.54-1.85-.9l.45-.35c3.57 1.65 7.45 1.65 10.98 0l.46.35c-.59.36-1.21.66-1.86.9l1.18 1.92a18.1 18.1 0 0 0 5.5-2.8c.47-4.7-.8-8.76-3.91-12.35ZM8.75 14.9c-1.08 0-1.97-.98-1.97-2.18s.87-2.18 1.97-2.18 1.99.98 1.97 2.18c0 1.2-.87 2.18-1.97 2.18Zm6.5 0c-1.08 0-1.97-.98-1.97-2.18s.87-2.18 1.97-2.18 1.99.98 1.97 2.18c0 1.2-.87 2.18-1.97 2.18Z" fill="currentColor"/></svg>
+        </a>
+      </nav>
+      <p class="micro-copy">FIND ME AROUND THE INTERNET</p>
+    </section>
+
+    <footer class="site-footer">© 2026 PARVEZ HASAN NAHID</footer>
+  </main>
+</body>
+</html>
