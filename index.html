@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050407">
+  <meta name="description" content="A little space, a different perspective. The personal world of Parvez Hasan Nahid.">
+  <title>Nahid's World — Parvez Hasan Nahid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading Nahid's World">
+    <div class="loader-inner">
+      <p class="loader-welcome">WELCOME TO NAHID'S WORLD</p>
+      <p class="loader-subtitle">A little space, a different perspective.</p>
+      <div class="progress-track" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100">
+        <span class="progress-fill" id="progressFill"></span>
+      </div>
+      <p class="loader-status" id="loaderStatus">INITIALIZING EXPERIENCE...</p>
+    </div>
+  </div>
+
+<main class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="fire-scene" aria-hidden="true"><canvas id="fireCanvas"></canvas><div class="fire-vignette"></div><div class="embers" id="embers"></div></div>
+
+    <section class="profile-card" aria-labelledby="profile-name">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> PERSONAL SPACE <span class="eyebrow-line"></span></div>
+      <div class="portrait-wrap">
+        <div class="portrait-aura"></div>
+        <img class="portrait" src="profile.jpg" alt="Portrait of Parvez Hasan Nahid" width="160" height="160">
+      </div>
+      <h1 id="profile-name">Parvez Hasan Nahid</h1>
+      <p class="tagline">A little corner of my world.</p>
+      <div class="title-rule"><span></span><i></i><span></span></div>
+
+      <nav class="social-links" aria-label="Social media links">
+        <a class="social-link" href="https://www.facebook.com/share/19rhKZbsyh/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.53 0-4.26 1.54-4.26 4.37V9.6H7.12v3.2h2.86V21h3.52Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/n.aurex/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.75" cy="6.45" r="1.15" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@_aure.x" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.1 8.2a7.1 7.1 0 0 1-4.3-1.45v7.1a5.75 5.75 0 1 1-5-5.7v3.55a2.25 2.25 0 1 0 1.5 2.13V2.5h3.5c.15 2.3 1.7 4.2 4.3 4.55v1.15Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/8801781724528" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 3.9A11.35 11.35 0 0 0 2.25 17.58L.7 23.25l5.8-1.52A11.35 11.35 0 0 0 20.1 3.9ZM12 20.7a9.4 9.4 0 0 1-4.8-1.32l-.35-.2-3.44.9.92-3.35-.22-.35A9.4 9.4 0 1 1 12 20.7Zm5.16-7.05c-.28-.14-1.65-.82-1.9-.91-.25-.1-.44-.14-.62.14-.19.28-.72.91-.88 1.1-.16.18-.32.2-.6.06-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.32.42-.48.14-.16.18-.28.28-.47.09-.18.04-.35-.03-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47h-.53c-.19 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s.99 2.68 1.13 2.86c.14.19 1.95 2.98 4.72 4.18.66.28 1.17.45 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.65-.68 1.88-1.33.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33Z" fill="currentColor"/></svg>
+        </a>
+        <a class="social-link" href="https://discord.gg/9u6hfuHe2p" target="_blank" rel="noopener noreferrer" aria-label="Discord server" title="Discord">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.3A18.2 18.2 0 0 0 15.2 4l-.55 1.12a16.7 16.7 0 0 0-5.3 0L8.8 4a18.1 18.1 0 0 0-4.5 1.3C1.45 9.5.68 13.6 1.07 17.65a18.2 18.2 0 0 0 5.5 2.8l1.18-1.92c-.65-.24-1.27-.54-1.85-.9l.45-.35c3.57 1.65 7.45 1.65 10.98 0l.46.35c-.59.36-1.21.66-1.86.9l1.18 1.92a18.1 18.1 0 0 0 5.5-2.8c.47-4.7-.8-8.76-3.91-12.35ZM8.75 14.9c-1.08 0-1.97-.98-1.97-2.18s.87-2.18 1.97-2.18 1.99.98 1.97 2.18c0 1.2-.87 2.18-1.97 2.18Zm6.5 0c-1.08 0-1.97-.98-1.97-2.18s.87-2.18 1.97-2.18 1.99.98 1.97 2.18c0 1.2-.87 2.18-1.97 2.18Z" fill="currentColor"/></svg>
+        </a>
+      </nav>
+      <p class="micro-copy">FIND ME AROUND THE INTERNET</p>
+    </section>
+
+    <footer class="site-footer">© 2026 PARVEZ HASAN NAHID</footer>
+  </main>
+  <script>
+(() => {
+  "use strict";
+
+  // Minimal monochrome intro: no logo, no color, no artificial long wait.
+  const loader = document.getElementById("loader");
+  const fill = document.getElementById("progressFill");
+  const status = document.getElementById("loaderStatus");
+  const canvas = document.getElementById("fireCanvas");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let progress = 0;
+  let pageReady = document.readyState === "complete";
+  window.addEventListener("load", () => { pageReady = true; }, { once: true });
+
+  const progressTimer = window.setInterval(() => {
+    const target = pageReady ? 100 : 88;
+    progress = Math.min(target, progress + (progress < 65 ? 5 : 2));
+    if (fill) fill.style.width = progress + "%";
+    if (progress >= 100) {
+      window.clearInterval(progressTimer);
+      if (status) status.textContent = "EXPERIENCE READY";
+      window.setTimeout(() => loader?.classList.add("is-hidden"), 180);
+    }
+  }, reduceMotion ? 12 : 38);
+
+  // Canvas fire: many soft-edged, independently moving flame tongues.
+  // It is drawn locally (no external assets), adapts to device pixel ratio,
+  // and caps its frame rate on smaller screens.
+  if (!canvas || reduceMotion) return;
+  const ctx = canvas.getContext("2d", { alpha: true });
+  if (!ctx) return;
+
+  let width = 0, height = 0, dpr = 1, raf = 0, lastFrame = 0;
+  const mobile = window.innerWidth < 700;
+  const frameInterval = mobile ? 1000 / 30 : 1000 / 45;
+  const tongues = [];
+  const embers = [];
+  const rand = (min, max) => min + Math.random() * (max - min);
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    width = Math.max(1, rect.width);
+    height = Math.max(1, rect.height);
+    dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1.35 : 1.7);
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function newTongue(initial = false) {
+    const baseX = rand(-width * .04, width * 1.04);
+    return {
+      x: baseX,
+      y: initial ? rand(height * .15, height * 1.04) : height + rand(8, 65),
+      baseY: height + rand(-12, 28),
+      w: rand(mobile ? 13 : 18, mobile ? 39 : 57),
+      h: rand(height * .16, height * .55),
+      speed: rand(.55, 1.55),
+      sway: rand(8, 34),
+      phase: rand(0, Math.PI * 2),
+      hue: rand(258, 285),
+      alpha: rand(.18, .48),
+      taper: rand(.55, .9)
+    };
+  }
+
+  function init() {
+    tongues.length = 0;
+    embers.length = 0;
+    const count = mobile ? 34 : 58;
+    for (let i = 0; i < count; i++) tongues.push(newTongue(true));
+    const emberCount = mobile ? 22 : 38;
+    for (let i = 0; i < emberCount; i++) {
+      embers.push({
+        x: rand(0, width), y: rand(0, height),
+        r: rand(.7, 1.8), vy: rand(.35, 1.15),
+        vx: rand(-.35, .35), a: rand(.2, .8),
+        phase: rand(0, Math.PI * 2)
+      });
+    }
+  }
+
+  function drawTongue(t, time) {
+    const life = Math.max(0, Math.min(1, (t.baseY - t.y) / t.h));
+    const sway = Math.sin(time * .0014 + t.phase) * t.sway;
+    const x = t.x + sway;
+    const tipY = t.y;
+    const baseY = t.baseY;
+    const h = baseY - tipY;
+    if (h <= 0) return;
+
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    ctx.globalAlpha = t.alpha * Math.min(1, life * 5 + .15);
+    const grad = ctx.createLinearGradient(0, baseY, 0, tipY);
+    grad.addColorStop(0, `hsla(${t.hue}, 100%, 48%, .02)`);
+    grad.addColorStop(.18, `hsla(${t.hue}, 100%, 58%, .42)`);
+    grad.addColorStop(.56, `hsla(${t.hue + 8}, 100%, 66%, .26)`);
+    grad.addColorStop(1, `hsla(${t.hue + 14}, 100%, 76%, 0)`);
+    ctx.fillStyle = grad;
+    ctx.shadowColor = `hsla(${t.hue}, 100%, 60%, .45)`;
+    ctx.shadowBlur = t.w * 1.25;
+    ctx.beginPath();
+    ctx.moveTo(x - t.w, baseY);
+    ctx.bezierCurveTo(x - t.w * 1.05, baseY - h * .24, x - t.w * .28, tipY + h * .34, x + Math.sin(time*.002+t.phase)*t.w*.16, tipY);
+    ctx.bezierCurveTo(x + t.w * .65, tipY + h * .28, x + t.w * 1.05, baseY - h * .2, x + t.w, baseY);
+    ctx.closePath();
+    ctx.fill();
+
+    // A brighter inner tongue gives the fire depth without obscuring the page.
+    const inner = ctx.createLinearGradient(0, baseY, 0, tipY + h * .15);
+    inner.addColorStop(0, "rgba(193,117,255,0)");
+    inner.addColorStop(.45, "rgba(205,151,255,.14)");
+    inner.addColorStop(1, "rgba(235,207,255,0)");
+    ctx.fillStyle = inner;
+    ctx.shadowBlur = t.w * .45;
+    ctx.beginPath();
+    ctx.moveTo(x - t.w*.36, baseY);
+    ctx.quadraticCurveTo(x - t.w*.1, tipY + h*.24, x + Math.sin(time*.002+t.phase)*t.w*.08, tipY + h*.05);
+    ctx.quadraticCurveTo(x + t.w*.38, tipY + h*.3, x + t.w*.36, baseY);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function draw(now) {
+    raf = requestAnimationFrame(draw);
+    if (now - lastFrame < frameInterval) return;
+    lastFrame = now;
+    ctx.clearRect(0, 0, width, height);
+
+    // Low purple furnace glow anchors the flames to the bottom edge.
+    const glow = ctx.createRadialGradient(width*.5, height*1.02, 0, width*.5, height*1.02, height*.88);
+    glow.addColorStop(0, "rgba(126, 35, 205, .28)");
+    glow.addColorStop(.38, "rgba(84, 26, 151, .17)");
+    glow.addColorStop(1, "rgba(35, 8, 64, 0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, width, height);
+
+    tongues.forEach((t, i) => {
+      t.y -= t.speed * (mobile ? 1.05 : 1.25);
+      drawTongue(t, now + i * 23);
+      if (t.y + t.h < 0 || t.y < t.baseY - t.h) tongues[i] = newTongue(false);
+    });
+
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    embers.forEach(e => {
+      e.y -= e.vy;
+      e.x += e.vx + Math.sin(now*.001 + e.phase)*.24;
+      if (e.y < -5) { e.y = height + rand(2, 35); e.x = rand(0, width); }
+      const pulse = .45 + .55 * Math.sin(now*.002 + e.phase);
+      ctx.globalAlpha = e.a * pulse;
+      ctx.fillStyle = "#d9aaff";
+      ctx.shadowColor = "#a64dff";
+      ctx.shadowBlur = 9;
+      ctx.beginPath();
+      ctx.arc(e.x, e.y, e.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  resize();
+  init();
+  window.addEventListener("resize", () => { resize(); init(); }, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) cancelAnimationFrame(raf);
+    else { lastFrame = 0; raf = requestAnimationFrame(draw); }
+  });
+  raf = requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
