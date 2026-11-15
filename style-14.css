@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #08070d;
+  --purple: #a855f7;
+  --lavender: #d8b4fe;
+  --muted: #9992a6;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(74, 25, 112, .20), transparent 42%),
+    #08070d;
+  color: #f7f2ff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 36px, 720px);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 28px;
+  text-align: center;
+}
+
+.profile { position: relative; z-index: 2; }
+
+.logo {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 27px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(216, 180, 254, .32);
+  border-radius: 25px;
+  background: linear-gradient(145deg, rgba(168,85,247,.17), rgba(18,12,27,.75));
+  box-shadow: 0 0 38px rgba(147, 51, 234, .20), inset 0 0 22px rgba(168,85,247,.08);
+  font: 700 39px 'Space Grotesk', sans-serif;
+  letter-spacing: -4px;
+}
+.logo span { color: #c084fc; }
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #c084fc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .34em;
+}
+
+h1 {
+  margin: 0;
+  font: 600 clamp(27px, 6vw, 42px) 'Space Grotesk', sans-serif;
+  letter-spacing: -.055em;
+}
+
+.subtitle {
+  margin: 12px 0 34px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .02em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: #d8cce6;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(216,180,254,.13);
+  border-radius: 17px;
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition: color .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+  animation: gentle-float 4s ease-in-out infinite;
+}
+.social-link:nth-child(2) { animation-delay: -.7s; }
+.social-link:nth-child(3) { animation-delay: -1.4s; }
+.social-link:nth-child(4) { animation-delay: -2.1s; }
+.social-link:nth-child(5) { animation-delay: -2.8s; }
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+.social-link:nth-child(2) svg,
+.social-link:nth-child(4) svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.social-link:nth-child(2) .dot { fill: currentColor; stroke: none; }
+
+.social-link:hover, .social-link:focus-visible, .social-link.copied {
+  color: white;
+  outline: none;
+  border-color: rgba(192,132,252,.75);
+  background: rgba(147,51,234,.22);
+  box-shadow: 0 0 25px rgba(168,85,247,.32), 0 0 55px rgba(126,34,206,.15);
+  transform: translateY(-4px);
+}
+
+.hint {
+  min-height: 18px;
+  margin: 22px 0 0;
+  color: #81768f;
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+footer {
+  position: absolute;
+  bottom: 25px;
+  color: rgba(195,181,210,.42);
+  font-size: 9px;
+  letter-spacing: .22em;
+}
+
+/* Animated purple fire in the background */
+.fire-field {
+  position: fixed;
+  z-index: 0;
+  inset: auto 0 0;
+  height: min(66vh, 620px);
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.8) 42%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.8) 42%, transparent 100%);
+}
+
+.fire-glow {
+  position: absolute;
+  inset: 25% -20% -20%;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(147,51,234,.34), transparent 58%),
+    radial-gradient(ellipse at 18% 90%, rgba(109,40,217,.22), transparent 42%),
+    radial-gradient(ellipse at 82% 92%, rgba(192,132,252,.19), transparent 40%);
+  filter: blur(28px);
+  animation: glow-pulse 5s ease-in-out infinite alternate;
+}
+
+.flame {
+  position: absolute;
+  bottom: -28%;
+  width: 38vw;
+  min-width: 260px;
+  height: 90%;
+  border-radius: 50% 50% 12% 12%;
+  filter: blur(28px);
+  transform-origin: 50% 100%;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(ellipse at 50% 88%, rgba(216,180,254,.78) 0%, rgba(168,85,247,.48) 22%, rgba(126,34,206,.22) 48%, transparent 72%);
+  animation: flame-rise 5.5s ease-in-out infinite;
+}
+.flame-a { left: -8%; animation-delay: -1.2s; }
+.flame-b {
+  left: 31%;
+  width: 42vw;
+  height: 105%;
+  opacity: .8;
+  animation-delay: -3.4s;
+  animation-duration: 6.5s;
+}
+.flame-c {
+  right: -9%;
+  width: 39vw;
+  opacity: .72;
+  animation-delay: -2.1s;
+  animation-duration: 4.8s;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes flame-rise {
+  0%, 100% { transform: translate3d(0, 5%, 0) scaleX(.88) scaleY(.92) rotate(-3deg); opacity: .55; }
+  35% { transform: translate3d(3%, -4%, 0) scaleX(1.08) scaleY(1.08) rotate(4deg); opacity: .9; }
+  70% { transform: translate3d(-4%, -1%, 0) scaleX(.96) scaleY(1.02) rotate(-2deg); opacity: .72; }
+}
+@keyframes glow-pulse {
+  from { opacity: .65; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.08); }
+}
+
+@media (max-width: 480px) {
+  .socials { gap: 10px; }
+  .social-link { width: 48px; height: 48px; border-radius: 15px; }
+  .flame { width: 70vw; }
+  .flame-b { width: 80vw; left: 10%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

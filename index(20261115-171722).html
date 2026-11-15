@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070d">
+  <meta name="description" content="Parvez Hasan Nahid — personal social links.">
+  <title>Parvez Hasan Nahid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fire-field" aria-hidden="true">
+    <span class="flame flame-a"></span>
+    <span class="flame flame-b"></span>
+    <span class="flame flame-c"></span>
+    <span class="fire-glow"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="profile">
+      <div class="logo">N<span>.</span></div>
+      <p class="eyebrow">PERSONAL SPACE</p>
+      <h1>Parvez Hasan Nahid</h1>
+      <p class="subtitle">A little corner of my world.</p>
+
+      <nav class="socials" aria-label="Social media links">
+        <a class="social-link" href="https://www.facebook.com/share/19rhKZbsyh/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5v2.1H7v3.2h2.9V21h3.6Z"/></svg>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/n.aurex/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle class="dot" cx="17.7" cy="6.5" r="1"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@_aure.x" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 3c.3 2.3 1.6 3.7 4 3.9v3.2a8.2 8.2 0 0 1-4-1.2v6.5a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a3 3 0 1 0 1.8 2.8V3h3.2Z"/></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/8801781724528" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.9a8.2 8.2 0 1 1 16-3.4Z"/><path d="M9 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2 .2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.3.3.5 0 .4-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-1-.1-2.3-.7-3.7-1.9-1.5-1.3-2.4-2.8-2.6-3.8-.2-.8.1-1.5.5-2Z"/></svg>
+        </a>
+        <button class="social-link" type="button" aria-label="Copy Discord username" title="Copy Discord username" onclick="copyDiscord(this)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.7A17 17 0 0 0 15.5 4l-.5 1a15.7 15.7 0 0 0-6 0l-.5-1a17 17 0 0 0-4.2 1.7C1.7 9.5 1 13.2 1.4 16.9a17 17 0 0 0 5.2 2.6l1.1-1.8-1.7-.8.4-.3a12 12 0 0 0 11.2 0l.4.3-1.7.8 1.1 1.8a17 17 0 0 0 5.2-2.6c.5-4.3-.8-8-2.9-11.2ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg>
+        </button>
+      </nav>
+      <p class="hint" id="hint" aria-live="polite">Find me around the internet</p>
+    </section>
+
+    <footer>© 2026 PARVEZ HASAN NAHID</footer>
+  </main>
+
+  <script>
+    function copyDiscord(button) {
+      navigator.clipboard.writeText("btwnahid").then(() => {
+        document.getElementById("hint").textContent = "Discord username copied: btwnahid";
+        button.classList.add("copied");
+        setTimeout(() => button.classList.remove("copied"), 900);
+      }).catch(() => {
+        document.getElementById("hint").textContent = "Discord: btwnahid";
+      });
+    }
+  </script>
+</body>
+</html>
